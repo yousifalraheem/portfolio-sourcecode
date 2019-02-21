@@ -19,7 +19,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                 <div className="main-container">
                     <header className="jumbotron">
                         <div className="portfolio-image">
-                            <img src={ProfileImage} alt="My Profile Image" itemType="image/png" title="Profile Image" />
+                            <img src={ProfileImage} alt="Yousif's Profile Image" itemType="image/png" title="Profile Image" />
                         </div>
                         <div className="name-and-occupation">
                             <h1 className="name">

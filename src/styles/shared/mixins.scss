@@ -6,3 +6,19 @@
     left: 0;
     overflow: hidden;
 }
+
+@mixin transition($props) {
+    -webkit-transition: $props;
+    -moz-transition: $props;
+    -o-transition: $props;
+    -ms-transition: $props;
+    transition: $props;
+}
+
+@mixin transform($props) {
+    -webkit-transform: $props;
+    -moz-transform: $props;
+    -o-transform: $props;
+    -ms-transform: $props;
+    transform: $props;
+}

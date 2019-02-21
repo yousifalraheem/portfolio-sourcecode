@@ -21,6 +21,8 @@ $occupation-size: 25px;
             margin: 20px -80px;
             display: flex;
             align-items: center;
+            justify-content: center;
+            @include transition((margin, padding));
             > div {
                 position: relative;
                 display: inline-block;
@@ -32,6 +34,10 @@ $occupation-size: 25px;
                 min-height: $profile-image-size;
                 border-radius: 100%;
                 overflow: hidden;
+                @include transition((width 200ms, height 200ms, min-width, 200ms, min-height 200ms, box-shadow 500ms));
+                &:hover {
+                    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4), 0 0 20px 0px rgba(0, 0, 0, 0.5);
+                }
                 > img {
                     position: relative;
                     width: 100%;
@@ -43,8 +49,10 @@ $occupation-size: 25px;
                 > h1.name {
                     font-size: $name-size;
                     text-transform: uppercase;
-                    word-break: keep-all;
+                    word-spacing: 100vw;
+                    word-break: break-word;
                     margin: 0;
+                    @include transition((font-size 200ms));
                 }
                 > h2.occupation {
                     font-size: $occupation-size;
@@ -64,7 +72,17 @@ $occupation-size: 25px;
     > main {
         > div.main-container {
             > header.jumbotron {
-                padding: 0 20px;
+                > div.portfolio-image {
+                    width: $profile-image-size-sm;
+                    height: $profile-image-size-sm;
+                    min-width: $profile-image-size-sm;
+                    min-height: $profile-image-size-sm;
+                }
+                > div.name-and-occupation {
+                    > h1.name {
+                        font-size: 40px;
+                    }
+                }
             }
         }
     }
@@ -76,6 +94,7 @@ $occupation-size: 25px;
             > header.jumbotron {
                 flex-direction: column;
                 margin: 20px 0;
+                padding: 0;
                 > div {
                     width: 100%;
                     text-align: center;
@@ -84,8 +103,8 @@ $occupation-size: 25px;
                     margin: 0;
                     margin-bottom: 40px;
                     > h1.name {
-                        font-size: 40px;
                         margin-top: 40px;
+                        word-spacing: inherit;
                     }
                 }
             }
