@@ -1,0 +1,23 @@
+> div.columns-container {
+    position: relative;
+    display: flex;
+    > div[class*="-column"] {
+        position: relative;
+        &.left-column {
+            flex: 4;
+            padding-right: 8px;
+        }
+        &.right-column {
+            flex: 3;
+            padding-left: 8px;
+        }
+        > section {
+            > header {
+                font-size: 24px;
+                font-weight: 900;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

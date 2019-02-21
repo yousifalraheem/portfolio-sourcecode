@@ -1,0 +1,62 @@
+$experience-icon-size: 18px;
+div.resume-entry-container {
+    margin-bottom: 40px;
+    > h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    > h2 {
+        font-size: 18px;
+        margin: 0;
+    }
+    > dl {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+        > dt {
+            grid-column-start: 1;
+            > img {
+                width: $experience-icon-size;
+                height: $experience-icon-size;
+            }
+        }
+        > dd {
+            margin-inline-start: 10px;
+            grid-column-start: 2;
+        }
+    }
+    > p {
+        font-size: 18px;
+    }
+    > ul.description {
+        padding-left: 23px;
+        > li {
+            font-size: 18px;
+        }
+    }
+    &.condensed {
+        margin-bottom: 20px;
+        > h1,
+        > h2,
+        > dl,
+        > p,
+        > ul.description {
+            margin: 0;
+            margin-bottom: 3px;
+        }
+    }
+    &.condensed-list {
+        > ul {
+            padding: 0;
+            > li {
+                display: inline;
+                list-style: none;
+                &:not(:last-child) {
+                    &:after {
+                        content: ", ";
+                    }
+                }
+            }
+        }
+    }
+}

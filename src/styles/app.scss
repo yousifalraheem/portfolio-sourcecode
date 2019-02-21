@@ -13,6 +13,9 @@ body {
         position: relative;
         > .App {
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             @import "./main/main";
         }
     }

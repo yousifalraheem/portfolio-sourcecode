@@ -1,0 +1,16 @@
+[
+    {
+        "title": "M.Sc. in Software Engineering",
+        "university": "Staffordshire University",
+        "dateFrom": "Feb 2006",
+        "dateTo": "Jun 2009",
+        "location": "Kuala Lumpur, Malaysia"
+    },
+    {
+        "title": "B.Sc. in Software Engineering",
+        "university": "Al-Mansour University College",
+        "dateFrom": "Sep 2005",
+        "dateTo": "May 2009",
+        "location": "Baghdad, Iraq"
+    }
+]

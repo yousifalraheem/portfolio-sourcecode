@@ -1,0 +1,70 @@
+[
+    {
+        "title": "Software Developer",
+        "company": "SEB",
+        "dateFrom": "Jan 2018",
+        "dateTo": "Present",
+        "location": "Kuala Lumpur, Malaysia",
+        "descriptionList": [
+            "Developed and lead several projects from start to finish.",
+            "Developed web applications in both Angular and React.",
+            "Developed and maintained template projects in both Angular and React with the best optimizations to increase performance and build time.",
+            "Developed and maintained custom fine-tuned Angular and React components, and deployed them on a private NPM repository.",
+            "Run cross-browser testing and implement polyfills to ensure that web applications are fully supported on all browsers.",
+            "Restructured project architectural design for optimum reusability and maintainability.",
+            "Documented functions, classes, components, how-to and more using modern tools and methodologies.",
+            "Mentored several work colleagues into learning new programming languages, technologies, writing style and debugging techniques."
+        ]
+    },
+    {
+        "title": "Web Developer",
+        "company": "Freelancer",
+        "dateFrom": "Dec 2018",
+        "dateTo": "Dec 2017",
+        "location": null,
+        "descriptionList": [
+            "Developed a dating web application that gathers statistical information about its client to be used for targeting advertisements more accurately. Technologies: Laravel Framework, PHP, JavaScript, jQuery, UIKit, SASS, MySQL and Web Sockets. Client: ITS Iraq, 2017.",
+            "Developed a medical directory web application the stores and retrieves information about clinics, doctors, and pharmacies in Iraq. Technologies: Laravel Framework, PHP, JavaScript, jQuery, Bootstrap, SASS, MySQL and Web Sockets. Client: ITS Iraq, 2016.",
+            "Developed and maintained an accounting web application that stores, retrieves and updates clients’ records. Technologies: PHP, JavaScript, jQuery, Bootstrap, CSS, and MySQL. Client: PianoNet ISP, 2014.",
+            "Developed a landing webpage that includes a store’s information and offered products, Technologies: PHP, JavaScript, jQuery, Bootstrap, CSS and MySQL. Client: Haifa Market, 2013."
+        ]
+    },
+    {
+        "title": "Web & IT Administrator",
+        "company": "EPC Engineering AB",
+        "dateFrom": "Jul 2012",
+        "dateTo": "Jul 2013",
+        "location": "Baghdad, Iraq",
+        "descriptionList": [
+            "Maintained the company’s website that is built mainly using PHP, JavaScript and CSS and deployed on WordPress. Patched updates and features regularly as required by business.",
+            "Built an offline archive web system to store, search and retrieve the company’s documents and visual assets. Technologies: PHP, JavaScript, jQuery, CSS and MySQL.",
+            "Maintained operating system and software updates and upgrades. As well as, running software maintenance diagnosis and clean-ups. ",
+            "Installed network equipment and computer hardware upgrades. As well as, maintaining and fixing corrupted devices and computers."
+        ]
+    },
+    {
+        "title": "Web Developer & IT Administrator",
+        "company": "Al-Nidaa ISP",
+        "dateFrom": "Jul 2009",
+        "dateTo": "Sep 2010",
+        "location": "Baghdad, Iraq",
+        "descriptionList": [
+            "Developed and maintained the company’s landing webpage that displays the company’s information, services, and pricing. Technologies: PHP, JavaScript, CSS, and MySQL.",
+            "Installed and maintained MikroTik Servers to manage bandwidth allocations of its users.",
+            "Maintained and configured Routes, Hardware Firewall, Network Modems, and outdoor transmission stations.",
+            "Maintained operating systems and software in the company’s computers."
+        ]
+    },
+    {
+        "title": "Web Developer & IT Administrator",
+        "company": "PianoNet ISP",
+        "dateFrom": "Feb 2006",
+        "dateTo": "Jun 2009",
+        "location": "Baghdad, Iraq",
+        "descriptionList": [
+            "Developed and maintained the company’s landing webpage that displays the company’s information, services, and pricing. Technologies: PHP, JavaScript, CSS, and MySQL.",
+            "Installed and maintained MikroTik Servers to manage bandwidth allocations of its users.",
+            "Maintained and configured Routes, Hardware Firewall, Network Modems, and outdoor transmission stations."
+        ]
+    }
+]

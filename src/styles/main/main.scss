@@ -1,46 +1,55 @@
 $profile-image-size: 300px;
 $name-size: 60px;
-$occupation-size: 30px;
+$occupation-size: 25px;
 
-> main.main-container {
+> main {
     position: relative;
     border-top: 25px solid $black;
     border-bottom: 25px solid $black;
-    padding: 20px 80px;
-    > section.jumbotron {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    > div.main-container {
         position: relative;
-        margin: 20px 0;
-        > div {
+        max-width: 1000px;
+        padding: 20px 80px;
+        > header.jumbotron {
             position: relative;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        > div.portfolio-image {
-            width: $profile-image-size;
-            height: $profile-image-size;
-            border-radius: 100%;
-            overflow: hidden;
-            > img {
+            margin: 20px 0;
+            > div {
                 position: relative;
-                width: 100%;
-                height: 100%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            > div.portfolio-image {
+                width: $profile-image-size;
+                height: $profile-image-size;
+                border-radius: 100%;
+                overflow: hidden;
+                > img {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            > div.name-and-occupation {
+                margin-left: 60px;
+                > h1.name {
+                    font-size: $name-size;
+                    text-transform: uppercase;
+                    word-break: keep-all;
+                    margin: 0;
+                }
+                > h2.occupation {
+                    font-size: $occupation-size;
+                    text-transform: uppercase;
+                    word-break: break-all;
+                    font-weight: 400;
+                    margin: 0;
+                }
             }
         }
-        > div.name-and-occupation {
-            margin-left: 60px;
-            > h1.name {
-                font-size: $name-size;
-                text-transform: uppercase;
-                word-break: keep-all;
-                margin: 0;
-            }
-            > h2.occupation {
-                font-size: $occupation-size;
-                text-transform: uppercase;
-                word-break: break-all;
-                font-weight: 300;
-                margin: 0;
-            }
-        }
+        @import "./columns/columns";
+        @import "../components/components";
     }
 }

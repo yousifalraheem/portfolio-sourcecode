@@ -1,4 +1,6 @@
 import React from "react";
+import LeftColumn from "./columns/left/LeftColumn";
+import RightColumn from "./columns/right/RightColumn";
 
 interface MainProps {}
 
@@ -13,25 +15,26 @@ export default class Main extends React.Component<MainProps, MainState> {
 
     render() {
         return (
-            <main className="main-container">
-                <section className="jumbotron">
-                    <div className="portfolio-image">
-                        <img
-                            src={ProfileImage}
-                            alt="My Profile Image"
-                            itemType="image/png"
-                            title="Profile Image"
-                        />
+            <main>
+                <div className="main-container">
+                    <header className="jumbotron">
+                        <div className="portfolio-image">
+                            <img src={ProfileImage} alt="My Profile Image" itemType="image/png" title="Profile Image" />
+                        </div>
+                        <div className="name-and-occupation">
+                            <h1 className="name">
+                                Yousif
+                                <br />
+                                Al-Raheem
+                            </h1>
+                            <h2 className="occupation">Software Engineer</h2>
+                        </div>
+                    </header>
+                    <div className="columns-container">
+                        <LeftColumn />
+                        <RightColumn />
                     </div>
-                    <div className="name-and-occupation">
-                        <h1 className="name">
-                            Yousif
-                            <br />
-                            Al-Raheem
-                        </h1>
-                        <h2 className="occupation">Software Engineer</h2>
-                    </div>
-                </section>
+                </div>
             </main>
         );
     }

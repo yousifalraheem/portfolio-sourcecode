@@ -1,0 +1,42 @@
+[
+    {
+        "subtitle": "Programming Skills",
+        "descriptionList": [
+            "JavaScript, TypeScript",
+            "Angular, React",
+            "Ajax, Axios, RxJS",
+            "Code-splitting, Service-workers, web-workers",
+            "Mustache, Handlebars",
+            "Webpack, Gulp, Grunt, Laravel-Mix",
+            "HTML, Jade",
+            "CSS, SCSS, SASS, LESS",
+            "Cordova",
+            "NodeJS, Express",
+            "REST",
+            "SQL",
+            "Git, TFS, SVN",
+            "NPM",
+            "PHP, Laravel, Symfony",
+            "Testing: Jasmine, Jest",
+            "Agile Software Development, SCRUM, JIRA",
+            "Bash, Command Prompt"
+        ]
+    },
+    {
+        "subtitle": "IT Skills",
+        "descriptionList": [
+            "Software & Hardware Maintenance",
+            "Software & Hardware diagnosis",
+            "Network installation and configuration"
+        ]
+    },
+    {
+        "subtitle": "Other Skills",
+        "descriptionList": [
+            "Photoshop, Illustrator",
+            "Blind Typing",
+            "Research & Development",
+            "Problem Solving"
+        ]
+    }
+]
