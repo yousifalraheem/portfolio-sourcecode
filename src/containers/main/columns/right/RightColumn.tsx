@@ -7,8 +7,9 @@ const personalDetails: Array<DetailedListItem> = require("../../../../assets/dat
 const listOfSkills: Array<ResumeEntryItem> = require("../../../../assets/data/listOfSkills.json");
 const listOfTrails: Array<string> = require("../../../../assets/data/listOfTraits.json");
 const listOfLanguages: Array<string> = require("../../../../assets/data/listOfLanguages.json");
-const listOfInterests: Array<string> = require("../../../../assets/data/listOfInterests.json");
-const listOfCauses: Array<string> = require("../../../../assets/data/listOfCauses.json");
+const listOfPublications: Array<string> = require("../../../../assets/data/listOfPublications.json");
+const listOfCertificates: Array<ResumeEntryItem> = require("../../../../assets/data/listOfCertificates.json");
+const listOfMemberships: Array<ResumeEntryItem> = require("../../../../assets/data/listOfMemberships.json");
 
 const RightColumn: React.FunctionComponent = () => (
     <div className="right-column">
@@ -49,13 +50,25 @@ const RightColumn: React.FunctionComponent = () => (
         </section>
 
         <section>
-            <header>Interest</header>
-            {listOfInterests && <ResumeEntry descriptionList={listOfInterests} />}
+            <header>Publications</header>
+            {listOfPublications &&
+                listOfPublications.map((item: string, i: number) => <ResumeEntry description={item} key={i} />)}
         </section>
 
         <section>
-            <header>Causes I Care About</header>
-            {listOfCauses && <ResumeEntry descriptionList={listOfCauses} />}
+            <header>Memberships</header>
+            {listOfMemberships &&
+                listOfMemberships.map((item: ResumeEntryItem, i: number) => (
+                    <ResumeEntry className="condensed" {...item} key={i} />
+                ))}
+        </section>
+
+        <section>
+            <header>Certificates</header>
+            {listOfCertificates &&
+                listOfCertificates.map((item: ResumeEntryItem, i: number) => (
+                    <ResumeEntry className="condensed" {...item} key={i} />
+                ))}
         </section>
     </div>
 );

@@ -1,18 +1,18 @@
 [
     {
-        "subtitle": "Phone",
+        "title": "Phone",
         "description": "+60 18-8711-350"
     },
     {
-        "subtitle": "Email",
+        "title": "Email",
         "description": "yousifalraheem@outlook.com"
     },
     {
-        "subtitle": "Location",
+        "title": "Location",
         "description": "Bukit Jalil, Kuala Lumpur"
     },
     {
-        "subtitle": "LinkedIn",
+        "title": "LinkedIn",
         "description": "linkedin.com/in/yousifalraheem"
     }
 ]

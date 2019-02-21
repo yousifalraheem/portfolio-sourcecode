@@ -4,10 +4,9 @@ div.resume-entry-container {
     > h1 {
         font-size: 24px;
         font-weight: bold;
-    }
-    > h2 {
-        font-size: 18px;
-        margin: 0;
+        &+dl {
+            margin: 0;
+        }
     }
     > dl {
         display: grid;
@@ -37,12 +36,14 @@ div.resume-entry-container {
     &.condensed {
         margin-bottom: 20px;
         > h1,
-        > h2,
         > dl,
         > p,
         > ul.description {
             margin: 0;
             margin-bottom: 3px;
+        }
+        > h1 {
+            font-size: 18px;
         }
     }
     &.condensed-list {
@@ -59,4 +60,8 @@ div.resume-entry-container {
             }
         }
     }
+}
+
+@media only screen and (max-width: 865px) {
+
 }

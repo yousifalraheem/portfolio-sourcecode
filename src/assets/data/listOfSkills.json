@@ -1,6 +1,6 @@
 [
     {
-        "subtitle": "Programming Skills",
+        "title": "Programming Skills",
         "descriptionList": [
             "JavaScript, TypeScript",
             "Angular, React",
@@ -23,7 +23,7 @@
         ]
     },
     {
-        "subtitle": "IT Skills",
+        "title": "IT Skills",
         "descriptionList": [
             "Software & Hardware Maintenance",
             "Software & Hardware diagnosis",
@@ -31,7 +31,7 @@
         ]
     },
     {
-        "subtitle": "Other Skills",
+        "title": "Other Skills",
         "descriptionList": [
             "Photoshop, Illustrator",
             "Blind Typing",

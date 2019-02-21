@@ -1,4 +1,5 @@
 $profile-image-size: 300px;
+$profile-image-size-sm: 250px;
 $name-size: 60px;
 $occupation-size: 25px;
 
@@ -10,20 +11,25 @@ $occupation-size: 25px;
     justify-content: center;
     width: 100%;
     > div.main-container {
+        overflow-x: hidden;
         position: relative;
         max-width: 1000px;
         padding: 20px 80px;
         > header.jumbotron {
             position: relative;
-            margin: 20px 0;
+            padding: 0 80px;
+            margin: 20px -80px;
+            display: flex;
+            align-items: center;
             > div {
                 position: relative;
                 display: inline-block;
-                vertical-align: middle;
             }
             > div.portfolio-image {
                 width: $profile-image-size;
                 height: $profile-image-size;
+                min-width: $profile-image-size;
+                min-height: $profile-image-size;
                 border-radius: 100%;
                 overflow: hidden;
                 > img {
@@ -43,7 +49,7 @@ $occupation-size: 25px;
                 > h2.occupation {
                     font-size: $occupation-size;
                     text-transform: uppercase;
-                    word-break: break-all;
+                    word-break: break-word;
                     font-weight: 400;
                     margin: 0;
                 }
@@ -51,5 +57,65 @@ $occupation-size: 25px;
         }
         @import "./columns/columns";
         @import "../components/components";
+    }
+}
+
+@media only screen and (max-width: 865px) {
+    > main {
+        > div.main-container {
+            > header.jumbotron {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 745px) {
+    > main {
+        > div.main-container {
+            > header.jumbotron {
+                flex-direction: column;
+                margin: 20px 0;
+                > div {
+                    width: 100%;
+                    text-align: center;
+                }
+                > div.name-and-occupation {
+                    margin: 0;
+                    margin-bottom: 40px;
+                    > h1.name {
+                        font-size: 40px;
+                        margin-top: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    > main {
+        > div.main-container {
+            padding: 20px 40px;
+            > div.columns-container {
+                display: block;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    > main {
+        > div.main-container {
+            padding: 20px;
+            > header.jumbotron {
+                > div.portfolio-image {
+                    width: $profile-image-size-sm;
+                    height: $profile-image-size-sm;
+                    min-width: $profile-image-size-sm;
+                    min-height: $profile-image-size-sm;
+                }
+            }
+        }
     }
 }

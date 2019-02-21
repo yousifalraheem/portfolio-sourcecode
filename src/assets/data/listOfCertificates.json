@@ -1,0 +1,25 @@
+[
+    {
+        "title": "ReactJS Training",
+        "university": "InfoTrek",
+        "date": "Apr 2018",
+        "location": "Kuala Lumpur, Malaysia"
+    },
+    {
+        "title": "IELTS",
+        "university": "British Council",
+        "date": "Mar 2018",
+        "location": "Kuala Lumpur, Malaysia"
+    },
+    {
+        "title": "Ultimate Developer Course",
+        "university": "Udemy",
+        "date": "Mar 2016"
+    },
+    {
+        "title": "IT Essentials",
+        "university": "CISCO",
+        "date": "Mar 2008",
+        "location": "Baghdad, Iraq"
+    }
+]

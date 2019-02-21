@@ -23,9 +23,7 @@ export default class Main extends React.Component<MainProps, MainState> {
                         </div>
                         <div className="name-and-occupation">
                             <h1 className="name">
-                                Yousif
-                                <br />
-                                Al-Raheem
+                                Yousif Alraheem
                             </h1>
                             <h2 className="occupation">Software Engineer</h2>
                         </div>

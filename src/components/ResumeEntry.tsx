@@ -13,9 +13,9 @@ export interface DetailedListItem {
 
 export interface ResumeEntryItem {
     title?: string;
-    subtitle?: string;
     company?: string;
     university?: string;
+    date?: Date | string;
     dateFrom?: Date | string;
     dateTo?: Date | string;
     location?: string;
@@ -29,8 +29,13 @@ export interface ResumeEntryItem {
 const ResumeEntry: React.FunctionComponent<ResumeEntryItem> = (props: ResumeEntryItem) => (
     <div className={"resume-entry-container" + (props.className ? ` ${props.className}` : "")}>
         {props.title && <h1>{props.title}</h1>}
-        {props.subtitle && <h2>{props.subtitle}</h2>}
-        {props.company || props.university || (props.dateFrom && props.dateTo) || props.location || props.score ? (
+        {props.company ||
+        props.university ||
+        props.dateFrom ||
+        props.dateTo ||
+        props.date ||
+        props.location ||
+        props.score ? (
             <dl>
                 {props.company && <dt>{<img src={briefcaseIcon} alt="briefcase" />}</dt>}
                 {props.company && <dd>{props.company}</dd>}
@@ -44,6 +49,13 @@ const ResumeEntry: React.FunctionComponent<ResumeEntryItem> = (props: ResumeEntr
                         {props.dateFrom} - {props.dateTo}
                     </dd>
                 ) : null}
+
+                {props.date && (
+                    <dt>
+                        <img src={calendarIcon} alt="calendar" />
+                    </dt>
+                )}
+                {props.date && <dd>{props.date}</dd>}
 
                 {props.location && <dt>{<img src={pinIcon} alt="pin" />}</dt>}
                 {props.location && <dd>{props.location}</dd>}
