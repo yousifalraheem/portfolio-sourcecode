@@ -1,48 +1,21 @@
-$spinner-border: 7px;
-$spinner-purple: #ad00ad;
-$spinner-blue: #65b4f5;
-$loading-bg: #eee;
-@mixin transform($props) {
-    -webkit-transform: $props;
-    -moz-transform: $props;
-    -o-transform: $props;
-    -ms-transform: $props;
-    transform: $props;
-}
-@mixin animation($props) {
-    -webkit-animation: $props;
-    -moz-animation: $props;
-    -o-animation: $props;
-    -ms-animation: $props;
-    animation: $props;
-}
-
 .loading-container {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    background-color: $loading-bg;
-    z-index: 99999;
-    @include transform(translateZ(50px));
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    >svg {
-        @include animation(spin 800ms linear infinite);
+    > svg {
+        overflow: visible;
+        -webkit-animation: spin 800ms linear infinite;
+        animation: spin 800ms linear infinite;
+        >circle {
+            transform: translate(50%, 50%);
+        }
     }
 }
 
 @keyframes spin {
     0% {
-        @include transform(rotate(0deg));
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% {
-        @include transform(rotate(360deg));
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
