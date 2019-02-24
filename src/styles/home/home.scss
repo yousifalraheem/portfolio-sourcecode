@@ -4,128 +4,140 @@ $profile-image-size: 300px;
     @extend %flex-center;
     padding: 20px;
     background-color: #eee;
-    @include animation(set-the-stage 800ms linear forwards);
-    .ItemCard {
-        position: relative;
-        display: flex;
-        overflow: hidden;
-        flex-direction: column;
-        cursor: pointer;
-        transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
-        box-shadow 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-        transform: perspective(600px) translate3d(0, 0, 0);
-        border-radius: 6px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        align-items: center;
-        max-width: 510px;
-        height: auto;
-        margin-top: 30px;
-        margin-right: auto;
-        margin-left: auto;
-        transform-style: preserve-3d;
-        backface-visibility: hidden;
-        border-radius: 50%;
-        overflow: hidden;
-        will-change: transform;
-        figure {
-            margin: 0;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            pointer-events: none;
-        }
-        .cover {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-        }
-        .ItemCard__thumb {
+    @include animation(set-the-stage 800ms ease-out forwards);
+    .profile-bubble-container {
+        // position: relative;
+        // @include animation(step-in 800ms ease-out forwards);
+        .profile-bubble {
             position: relative;
-            z-index: 3;
-            padding: 0;
-            transition: transform 0.2s;
-            pointer-events: none;
-            img {
-                display: block;
-                transition: box-shadow 0.2s;
-            }
-        }
-        .ItemCard__layer {
-            z-index: 10;
-            transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1);
-            opacity: 0;
-            background: #9d50bb;
-            background: -moz-linear-gradient(120deg, #9d50bb 0%, #4096ee 100%);
-            background: -webkit-linear-gradient(120deg, #9d50bb 0%, #4096ee 100%);
-            background: linear-gradient(120deg, #9d50bb 0%, #4096ee 100%);
-        }
-        .ItemCard__summary {
-            z-index: 20;
             display: flex;
+            overflow: hidden;
             flex-direction: column;
-            transform: perspective(600px) translate3d(0, 100%, 0);
-            text-align: center;
-            color: #fff;
-            justify-content: center;
+            cursor: pointer;
+            @include transition((
+                transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
+                box-shadow 0.8s cubic-bezier(0.215, 0.61, 0.355, 1)
+            ));
+            @include transform(perspective(600px) translate3d(0, 0, 0));
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            align-items: center;
+            max-width: 510px;
+            width: $profile-image-size;
+            height: $profile-image-size;
+            margin: 0 auto;
+            -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+            border-radius: 50%;
+            overflow: hidden;
             will-change: transform;
-        }
-        .ItemCard__title {
-            margin: 8px 0;
-            font-weight: 900;
-            transform: translate3d(0, 150px, 50px);
-            text-transform: uppercase;
-            color: #fff;
-            font-size: 19px;
-            line-height: 1.48;
-            transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.38);
-            @media screen and (max-width: 1050px) {
-                font-size: 22px;
+            figure {
+                margin: 0;
             }
-        }
-        .ItemCard__meta {
-            transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.38);
-            &.category {
-                font-family: "Roboto", sans-serif;
+            img {
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+            .cover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+            .profile-bubble__thumb {
+                position: relative;
+                z-index: 3;
+                padding: 0;
+                @include transition(transform 0.2s);
+                pointer-events: none;
+                img {
+                    display: block;
+                    @include transition(box-shadow 0.2s);
+                }
+            }
+            .profile-bubble__layer {
+                z-index: 10;
+                @include transition(opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1));
+                opacity: 0;
+                background: #9d50bb;
+                background: -moz-linear-gradient(120deg, #9d50bb 0%, #4096ee 100%);
+                background: -webkit-linear-gradient(120deg, #9d50bb 0%, #4096ee 100%);
+                background: linear-gradient(120deg, #9d50bb 0%, #4096ee 100%);
+            }
+            .profile-bubble__summary {
+                z-index: 20;
+                display: flex;
+                flex-direction: column;
+                @include transform(perspective(600px) translate3d(0, 100%, 0));
+                text-align: center;
+                color: #fff;
+                justify-content: center;
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                will-change: transform;
+            }
+            .profile-bubble__title {
+                margin: 8px 0;
                 font-weight: 900;
-                transform: translate3d(0, 150px, 40px);
+                @include transform(translate3d(0, 150px, 50px));
                 text-transform: uppercase;
-                color: #f53794;
-                font-size: 14px;
+                color: #fff;
+                font-size: 19px;
+                line-height: 1.48;
+                @include transition(transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1));
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.38);
+                @media screen and (max-width: 1050px) {
+                    font-size: 22px;
+                }
             }
-            &.designer {
-                font-style: italic;
-                transform: translate3d(0, 150px, 20px);
-                font-size: 12px;
+            .profile-bubble__meta {
+                @include transition(transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1));
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.38);
+                &.category {
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 900;
+                    transform: translate3d(0, 150px, 40px);
+                    text-transform: uppercase;
+                    color: #f53794;
+                    font-size: 14px;
+                }
+                &.designer {
+                    font-style: italic;
+                    @include transform(translate3d(0, 150px, 20px));
+                    font-size: 12px;
+                }
             }
-        }
-        /**
-         * Hover state
-         */
-        &:hover {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            .ItemCard__layer {
-                opacity: 0.6;
+            /**
+             * Hover state
+             */
+            &:hover {
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+                .profile-bubble__layer {
+                    opacity: 0.6;
+                }
+                .profile-bubble__summary {
+                    @include transform(translate3d(0, 0, 0));
+                }
+                .profile-bubble__title {
+                    @include transform(translate3d(0, 0, 50px));
+                }
+                .profile-bubble__meta.category {
+                    @include transform(translate3d(0, 0, 40px));
+                }
+                .profile-bubble__meta.designer {
+                    transition-delay: 0.05s;
+                    @include transform(translate3d(0, 0, 20px));
+                }
             }
-            .ItemCard__summary {
-                transform: translate3d(0, 0, 0);
-            }
-            .ItemCard__title {
-                transform: translate3d(0, 0, 50px);
-            }
-            .ItemCard__meta.category {
-                transform: translate3d(0, 0, 40px);
-            }
-            .ItemCard__meta.designer {
-                transition-delay: 0.05s;
-                transform: translate3d(0, 0, 20px);
+            &:active {
+                box-shadow: 0 1px 9px rgba(0, 0, 0, 0.9);
             }
         }
     }
@@ -143,10 +155,10 @@ $profile-image-size: 300px;
 @keyframes step-in {
     0% {
         opacity: 0;
-        transform: translateX(-30px);
+        @include transform(translateX(-30px));
     }
     100% {
         opacity: 1;
-        transform: translateX(0);
+        @include transform(translateX(0));
     }
 }
