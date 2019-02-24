@@ -1,5 +1,4 @@
 import React from "react";
-import "./loading.scss";
 
 interface LoadingProps {
     fullscreen?: boolean;
@@ -10,6 +9,7 @@ const loaderSize: number = 200;
 const loaderThickness: number = 10;
 
 const containerStyles: React.CSSProperties = {
+    position: "fixed",
     top: 0,
     bottom: 0,
     left: 0,
@@ -18,7 +18,9 @@ const containerStyles: React.CSSProperties = {
     backgroundColor: "#eee",
     zIndex: 99999,
     display: "flex",
+    WebkitAlignItems: "center",
     alignItems: "center",
+    WebkitJustifyContent: "center",
     justifyContent: "center"
 };
 
@@ -42,7 +44,16 @@ const Loading: React.FunctionComponent<LoadingProps> = (props: LoadingProps) => 
                 position: props.fullscreen !== undefined ? (!props.fullscreen ? "absolute" : "fixed") : "fixed"
             }}
         >
-            <svg xmlns="http://www.w3.org/2000/svg" width={props.size || loaderSize} height={props.size || loaderSize}>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={props.size || loaderSize}
+                height={props.size || loaderSize}
+                style={{
+                    overflow: "visible",
+                    WebkitAnimation: "spin 800ms linear infinite",
+                    animation: "spin 800ms linear infinite"
+                }}
+            >
                 <defs>
                     <filter id="blur" colorInterpolationFilters="sRGB" x="-1" y="-1" width="500%" height="500%">
                         <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
@@ -53,21 +64,33 @@ const Loading: React.FunctionComponent<LoadingProps> = (props: LoadingProps) => 
                     </linearGradient>
                 </defs>
                 <circle
-                    x="50%"
-                    y="50%"
+                    cx="50%"
+                    cy="50%"
                     r="40%"
                     stroke="url(#linear)"
                     strokeWidth={calculateStrokeSize(props.size || loaderSize)}
                     fill="transparent"
                     filter="url(#blur)"
+                    // style={{
+                    //     WebkitTransform: "translate(50%, 50%)",
+                    //     OTransform: "translate(50%, 50%)",
+                    //     msTransform: "translate(50%, 50%)",
+                    //     transform: "translate(50%, 50%)"
+                    // }}
                 />
                 <circle
-                    x="50%"
-                    y="50%"
+                    cx="50%"
+                    cy="50%"
                     r="40%"
                     stroke="url(#linear)"
                     strokeWidth={calculateStrokeSize(props.size || loaderSize)}
                     fill="transparent"
+                    // style={{
+                    //     WebkitTransform: "translate(50%, 50%)",
+                    //     OTransform: "translate(50%, 50%)",
+                    //     msTransform: "translate(50%, 50%)",
+                    //     transform: "translate(50%, 50%)"
+                    // }}
                 />
             </svg>
         </div>
